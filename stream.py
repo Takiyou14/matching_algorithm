@@ -40,7 +40,7 @@ else:
     graph = st.session_state['graph']
     st.session_state['graph'].clear()
 
-col1,col2=st.columns([1,2])
+col1,col2,col3=st.columns([1.5,0.25,3])
 
 with col1:
     st.title(':red[Matching Algorithms]')
@@ -50,7 +50,20 @@ with col2:
         ''
     with st.empty():
         ''
-    button=st.button('▶️',help='Start the algorithm')
+    button=st.button('Start',help='Start the algorithm')
+
+with col3:
+    with st.empty():
+        ''
+    with st.empty():
+        ''
+    play=st.button('▶',help='Video explained the algorithm')
+
+if play:
+    _, container, _ = st.columns([1, 3, 1])
+    video_file = open('animation.mp4', 'rb')
+    video_bytes = video_file.read()
+    container.video(data=video_bytes)
 
 my_bar = st.progress(0,text='Operation in progress...')
 Tab1,Tab2=st.tabs(['Company','Client'])
