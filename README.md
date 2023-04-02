@@ -1,1 +1,1 @@
-<a><button name="button" style = "color: red" onclick="https://matching-algorithm.streamlit.app/">Try it</button></a>
+[TRY IT](https://matching-algorithm.streamlit.app/){: .btn}
