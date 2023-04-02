@@ -1,1 +1,1 @@
-[TRY IT](https://matching-algorithm.streamlit.app/){: .btn}
+[TRY IT](https://matching-algorithm.streamlit.app/)
