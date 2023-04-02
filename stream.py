@@ -7,7 +7,6 @@ st.set_page_config(
     page_title='Matching Algorithms',
     page_icon=('∑'),
     layout='wide',
-    
 )
 
 st.markdown(
@@ -21,6 +20,12 @@ st.markdown(
         }
         .stProgress {
             display: none;
+        }
+        p {
+            text-align: center;
+        }
+        .stVideo {
+            width: 50px;
         }
     </style>""",
     unsafe_allow_html=True,
@@ -57,13 +62,20 @@ with col3:
         ''
     with st.empty():
         ''
-    play=st.button('▶',help='Video explained the algorithm')
+    play=st.button('▶',help='Video Explanation')
 
 if play:
-    _, container, _ = st.columns([1, 3, 1])
-    video_file = open('animation.mp4', 'rb')
-    video_bytes = video_file.read()
-    container.video(data=video_bytes)
+    col1_v,col2_v,col3_v= st.columns([2,0.25,2])
+    with col1_v:
+        video_file = open('animation.mp4', 'rb')
+        video_bytes = video_file.read()
+        st.video(data=video_bytes)
+        st.write(':red[Algorithm]')
+    with col3_v:
+        video_file = open('video.mp4', 'rb')
+        video_bytes = video_file.read()
+        st.video(data=video_bytes)
+        st.write(':red[Application]')
 
 my_bar = st.progress(0,text='Operation in progress...')
 Tab1,Tab2=st.tabs(['Company','Client'])
