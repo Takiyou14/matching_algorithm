@@ -4,7 +4,7 @@ from graphviz import Digraph
 from main import company, client,max_position
 
 st.set_page_config(
-    page_title='Matching Algorithms',
+    page_title='Assignment Problem',
     page_icon=('∑'),
     layout='wide',
 )
@@ -48,7 +48,7 @@ else:
 col1,col2,col3=st.columns([1.5,0.25,3])
 
 with col1:
-    st.title(':red[Matching Algorithms]')
+    st.title(':red[Assignment Problem]')
 
 with col2:
     with st.empty():
